@@ -6,35 +6,116 @@ const event = require("./config/event");
 const rsvpRoutes = require("./routes/rsvp");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Archivos estáticos
-app.use(express.static(path.join(__dirname, "public")));
+// =====================================================
+// ARCHIVOS ESTÁTICOS
+// =====================================================
 
-// API RSVP
+// En Vercel, los archivos dentro de /public se sirven
+// directamente como archivos estáticos.
+// Express no necesita servirlos mediante express.static().
+if (!process.env.VERCEL) {
+    app.use(
+        express.static(
+            path.join(__dirname, "public")
+        )
+    );
+}
+
+// =====================================================
+// RUTAS API
+// =====================================================
+
 app.use("/api/rsvp", rsvpRoutes);
 
-// Información del evento
 app.get("/api/event", (req, res) => {
     res.json(event);
 });
 
-// Prueba de base de datos
 app.get("/api/database-test", (req, res) => {
-    const result = db.prepare("SELECT 1 AS ok").get();
 
-    res.json({
-        database: result.ok === 1 ? "OK" : "ERROR"
+    try {
+
+        const result =
+            db.prepare(
+                "SELECT 1 AS ok"
+            ).get();
+
+        res.json({
+            database:
+                result.ok === 1
+                    ? "OK"
+                    : "ERROR"
+        });
+
+    } catch (error) {
+
+        console.error(
+            "Error comprobando base de datos:",
+            error
+        );
+
+        res.status(500).json({
+            database: "ERROR"
+        });
+
+    }
+
+});
+
+// =====================================================
+// MANEJO DE ERRORES
+// =====================================================
+
+app.use((error, req, res, next) => {
+
+    console.error(
+        "Error del servidor:",
+        error
+    );
+
+    if (res.headersSent) {
+        return next(error);
+    }
+
+    res.status(500).json({
+        error: "Error interno del servidor."
     });
+
 });
 
-// Iniciar servidor
-app.listen(PORT, () => {
-    console.log(`🤘 XV Metal`);
-    console.log(`Servidor: http://localhost:${PORT}`);
-    console.log(`Base de datos: SQLite`);
-});
+// =====================================================
+// DESARROLLO LOCAL
+// =====================================================
+
+// Vercel se encarga de ejecutar la aplicación.
+// Localmente seguimos usando npm start.
+
+if (!process.env.VERCEL) {
+
+    app.listen(
+        PORT,
+        () => {
+
+            console.log("🤘 XV Metal");
+            console.log(
+                `Servidor: http://localhost:${PORT}`
+            );
+            console.log(
+                "Base de datos: SQLite"
+            );
+
+        }
+    );
+
+}
+
+// =====================================================
+// EXPORTAR EXPRESS
+// =====================================================
+
+module.exports = app;

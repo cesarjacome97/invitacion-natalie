@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Invitación a los XV años de Natalie">
+
+    <title>XV de Natalie 🤘</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=UnifrakturCook:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+     NAVEGACIÓN
+     ===================================================== -->
+
+    <nav class="site-nav" id="siteNav">
+
+        <a href="#inicio" class="nav-link active">
+            INICIO
+        </a>
+
+        <a href="#mensaje" class="nav-link">
+            MENSAJE
+        </a>
+
+        <a href="#galeria" class="nav-link">
+            GALERÍA
+        </a>
+
+        <a href="#evento" class="nav-link">
+            EVENTO
+        </a>
+
+        <a href="#dress-code" class="nav-link">
+            VESTIMENTA
+        </a>
+
+        <a href="#rsvp" class="nav-link">
+            CONFIRMACION
+        </a>
+
+    </nav>
+
+    <!-- =====================================================
+     CONTROL DE MÚSICA
+     ===================================================== -->
+
+    <button class="music-control" id="musicControl" type="button" aria-label="Silenciar música"
+        title="Silenciar música">
+        <span id="musicIcon">♫</span>
+    </button>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <header class="hero" id="inicio">
+
+        <!-- Imagen de fondo -->
+        <div class="hero-image">
+
+            <picture>
+
+                <source media="(max-width: 768px)" srcset="/images/hero-mobile.jpg">
+
+                <img src="/images/hero-pc.jpg" alt="Natalie">
+
+            </picture>
+
+        </div>
+
+
+        <!-- Oscurecimiento -->
+        <div class="hero-overlay"></div>
+
+        <!-- Textura -->
+        <div class="hero-grain"></div>
+
+        <!-- Líneas decorativas -->
+        <div class="hero-frame hero-frame-top"></div>
+        <div class="hero-frame hero-frame-bottom"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-kicker">
+                HAS SIDO INVITADO
+            </div>
+
+            <div class="hero-xv">
+                XV
+            </div>
+
+            <div class="hero-name">
+                NATALIE
+            </div>
+
+            <div class="hero-line">
+                <span></span>
+                <strong>✦</strong>
+                <span></span>
+            </div>
+
+            <div class="hero-subtitle">
+                UNA NOCHE PARA HACER RUIDO
+            </div>
+
+            <div class="hero-date">
+                14 · NOVIEMBRE · 2026
+            </div>
+
+            <p class="hero-description">
+                Una noche para celebrar,<br>
+                hacer ruido y crear recuerdos.
+            </p>
+
+            <button class="enter-button" id="enterButton" type="button">
+                <span>ENTRAR AL SHOW</span>
+                <span class="button-arrow">↓</span>
+            </button>
+
+        </div>
+
+        <!-- Indicador inferior -->
+        <div class="scroll-indicator">
+
+            <span class="scroll-text">
+                COMIENZA LA NOCHE ↓
+            </span>
+
+            <span class="scroll-line"></span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <!-- =================================================
+             FECHA
+             ================================================= -->
+
+        <section class="date-section section">
+
+            <div class="section-inner">
+
+                <div class="section-label">
+                    LA NOCHE ESTÁ MARCADA
+                </div>
+
+                <h2>
+                    LA NOCHE
+                </h2>
+
+                <div class="date-display">
+
+                    <span class="date-day">
+                        14
+                    </span>
+
+                    <span class="date-month">
+                        NOVIEMBRE
+                    </span>
+
+                    <span class="date-year">
+                        2026
+                    </span>
+
+                </div>
+
+                <div class="date-time">
+                    SÁBADO · 15:00 HRS
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             COUNTDOWN
+             ================================================= -->
+
+        <section class="countdown-section">
+
+            <div class="countdown">
+
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <small>DÍAS</small>
+                </div>
+
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <small>HORAS</small>
+                </div>
+
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <small>MINUTOS</small>
+                </div>
+
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <small>SEGUNDOS</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MENSAJE
+             ================================================= -->
+
+        <section class="message-section" id="mensaje">
+
+            <div class="message-background"></div>
+
+            <div class="message-content">
+
+                <div class="section-kicker">
+                    ESTA NOCHE NOS PERTENECE
+                </div>
+
+                <div class="message-symbol">
+                    ✦
+                </div>
+
+                <h2 class="message-title">
+                    UNA NOCHE.
+                    <br>
+                    UNA HISTORIA.
+                    <br>
+                    UN XV.
+                </h2>
+
+                <div class="message-line">
+                    <span></span>
+                    <strong>✦</strong>
+                    <span></span>
+                </div>
+
+                <p class="message-intro">
+                    Hay noches que se celebran...
+                    <br>
+                    y hay noches que se recuerdan
+                    <br>
+                    para siempre.
+                </p>
+
+                <p class="message-main">
+                    <strong>Natalie cumple 15</strong>
+                    <br>
+                    y quiere compartir esta noche
+                    <br>
+                    contigo.
+                </p>
+
+                <div class="message-signature">
+                    <span>HAGAMOS TEMBLAR LA NOCHE</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             GALERÍA
+             ================================================= -->
+
+        <section class="gallery-section" id="galeria">
+            <div class="gallery-header">
+                <div class="section-kicker"> MOMENTOS QUE PERDURAN </div>
+                <h2 class="gallery-title"> MOMENTOS <span>QUE NO SE OLVIDAN</span> </h2>
+                <div class="gallery-line"> <span></span> <strong>✦</strong> <span></span> </div>
+            </div>
+            <div class="gallery-grid"> <!-- IMAGEN PRINCIPAL -->
+                <figure class="gallery-item gallery-main">
+                    <div class="gallery-image"> <img src="/images/gallery-1.jpg" alt="Natalie — fotografía principal">
+                    </div>
+                    <figcaption> <span>01</span> AQUÍ COMIENZA TODO </figcaption>
+                </figure> <!-- IMAGEN SECUNDARIA -->
+                <figure class="gallery-item gallery-secondary">
+                    <div class="gallery-image"> <img src="/images/gallery-2.jpg" alt="Natalie — fotografía"> </div>
+                    <figcaption> <span>02</span> EL MOMENTO </figcaption>
+                </figure> <!-- TERCERA IMAGEN -->
+                <figure class="gallery-item gallery-secondary">
+                    <div class="gallery-image"> <img src="/images/gallery-3.jpg" alt="Natalie — fotografía"> </div>
+                    <figcaption> <span>03</span> UN RECUERDO </figcaption>
+                </figure>
+            </div>
+            <div class="gallery-footer"> <span class="gallery-footer-line"></span> <span> MUCHO MÁS QUE UNA FIESTA
+                </span>
+                <span class="gallery-footer-line"></span>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             EVENTO
+             ================================================= -->
+
+        <section class="event-section" id="evento">
+
+            <div class="event-background"></div>
+
+            <div class="event-content">
+
+                <div class="section-kicker">
+                    EL ESCENARIO
+                </div>
+
+                <h2 class="event-title">
+                    DONDE
+                    <span>VIVIREMOS LA NOCHE</span>
+                </h2>
+
+                <div class="event-line">
+                    <span></span>
+                    <strong>✦</strong>
+                    <span></span>
+                </div>
+
+
+                <div class="venue-card">
+
+                    <div class="venue-number">
+                        01
+                    </div>
+
+                    <div class="venue-info">
+
+                        <h3 id="venueName">
+                            Salón de Eventos
+                        </h3>
+
+                        <p class="venue-address" id="venueAddress">
+                            DIRECCIÓN DEL EVENTO
+                        </p>
+
+                        <p class="venue-city" id="venueCity">
+                            Ciudad de México
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event-location">
+
+                    <button class="location-button" id="locationButton" type="button">
+                        <span>VER UBICACIÓN</span>
+                        <strong>→</strong>
+                    </button>
+
+                    <p class="location-note">
+                        LA UBICACIÓN SERÁ ACTUALIZADA PRÓXIMAMENTE
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DRESS CODE
+             ================================================= -->
+
+        <section class="dress-section" id="dress-code">
+
+            <div class="dress-background"></div>
+
+            <div class="dress-content">
+
+                <div class="section-kicker">
+                    CÓDIGO DE VESTIMENTA
+                </div>
+
+                <h2 class="dress-title">
+                    NEGRO.
+                    <span>ATREVIDO.</span>
+                    TÚ.
+                </h2>
+
+                <div class="dress-line">
+                    <span></span>
+                    <strong>✦</strong>
+                    <span></span>
+                </div>
+
+                <p class="dress-message">
+                    Viste como quieras. Sé tú.
+                    <br>
+                    Negro, cuero, botas, mezclilla, metal...
+                    <br>
+                    <strong>Hazlo tuyo.</strong>
+                </p>
+
+
+                <div class="dress-tags">
+
+                    <span>NEGRO</span>
+                    <span>CUERO</span>
+                    <span>MEZCLILLA</span>
+                    <span>BOTAS</span>
+                    <span>METAL</span>
+
+                </div>
+
+
+                <div class="dress-note">
+                    <span>✦</span>
+                    SIN REGLAS. SOLO ROCK.
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =================================================
+             RSVP
+             ================================================= -->
+
+        <section class="rsvp-section section" id="rsvp">
+
+            <div class="section-inner">
+
+                <div class="section-label">
+                    CONFIRMA TU ASISTENCIA
+                </div>
+
+                <h2>
+                    ¿VIENES AL SHOW?
+                </h2>
+
+                <p class="rsvp-intro">
+                    Confirma tu asistencia y acompáñanos
+                    en esta noche especial.
+                </p>
+
+                <form id="rsvpForm" class="rsvp-form">
+
+                    <div class="form-group">
+
+                        <label for="nombre">
+                            NOMBRE
+                        </label>
+
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            ¿ASISTIRÁS?
+                        </label>
+
+                        <div class="radio-group">
+
+                            <label class="radio-option">
+
+                                <input type="radio" name="confirmacion" value="confirmado" checked>
+
+                                <span>
+                                    SÍ, AHÍ ESTARÉ 🤘
+                                </span>
+
+                            </label>
+
+                            <label class="radio-option">
+
+                                <input type="radio" name="confirmacion" value="rechazado">
+
+                                <span>
+                                    NO PODRÉ ASISTIR
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group" id="asistentesGroup">
+
+                        <label for="asistentes">
+                            PERSONAS
+                        </label>
+
+                        <select id="asistentes" name="asistentes">
+
+                            <option value="1">
+                                1 PERSONA
+                            </option>
+
+                            <option value="2">
+                                2 PERSONAS
+                            </option>
+
+                            <option value="3">
+                                3 PERSONAS
+                            </option>
+
+                            <option value="4">
+                                4 PERSONAS
+                            </option>
+
+                            <option value="5">
+                                5 PERSONAS
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="telefono">
+                            TELÉFONO
+                        </label>
+
+                        <input type="tel" id="telefono" name="telefono" placeholder="Opcional">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="mensaje">
+                            MENSAJE
+                        </label>
+
+                        <textarea id="mensajeRsvp" name="mensaje" rows="4"
+                            placeholder="Déjale un mensaje a Natalie..."></textarea>
+
+                    </div>
+
+
+                    <button type="submit" id="submitRsvp" class="submit-button">
+                        CONFIRMAR ASISTENCIA
+                    </button>
+
+                </form>
+
+
+                <div id="rsvpResult" class="rsvp-result" hidden></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            XV · NATALIE
+        </div>
+
+        <div class="footer-text">
+            AÚN NOS QUEDAN COSAS POR HACER 🤘
+        </div>
+
+    </footer>
+
+
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>

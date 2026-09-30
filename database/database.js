@@ -1,11 +1,33 @@
 const Database = require("better-sqlite3");
 const path = require("path");
+const fs = require("fs");
 
-const databasePath = path.join(__dirname, "invitados.sqlite");
+// =========================
+// UBICACIÓN DE LA BASE DE DATOS
+// =========================
+
+// En Deplexo existe un volumen persistente en /data.
+// Localmente seguimos utilizando database/invitados.sqlite.
+
+const persistentDataPath = "/data";
+
+const databasePath = fs.existsSync(persistentDataPath)
+    ? path.join(persistentDataPath, "invitados.sqlite")
+    : path.join(__dirname, "invitados.sqlite");
+
+console.log("Base de datos:", databasePath);
+
+// =========================
+// CONEXIÓN
+// =========================
 
 const db = new Database(databasePath);
 
 db.pragma("journal_mode = WAL");
+
+// =========================
+// TABLA DE INVITADOS
+// =========================
 
 db.exec(`
     CREATE TABLE IF NOT EXISTS invitados (

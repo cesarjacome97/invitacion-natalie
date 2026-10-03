@@ -375,6 +375,9 @@ if (rsvpForm) {
 
                         <br>
 
+                        HAbrá caja de sobres por si quieres dejar un detalle.
+
+                        <br>
                         Nos vemos en los XV de Natalie.
                     `;
 
